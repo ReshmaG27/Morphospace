@@ -1,0 +1,137 @@
+/* Reset and Body Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    padding: 20px;
+}
+
+/* Container Styles */
+.tracking-container {
+    width: 60%;
+    max-width: 900px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Tracking ID Styles */
+.tracking-id {
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.tracking-id-value {
+    font-weight: bold;
+    color: #4CAF50;
+}
+
+/* Product Details */
+.product-details {
+    margin: 20px 0;
+}
+
+.product-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 15px auto; /* Center horizontally */
+    display: block; /* Ensures margin:auto works */
+}
+
+
+.product-name {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin: 5px 0;
+}
+
+.product-price {
+    font-size: 18px;
+    color: #4CAF50;
+    margin: 5px 0;
+}
+
+/* Progress Bar */
+.progress-container {
+    margin-top: 30px;
+}
+
+.progress-bar {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+    position: relative;
+}
+
+.progress-item {
+    text-align: center;
+    width: 25%;
+    position: relative;
+}
+
+.circle {
+    width: 40px;
+    height: 40px;
+    background-color: #ddd;
+    border-radius: 50%;
+    margin: 0 auto 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.step {
+    font-size: 14px;
+    color: #333;
+}
+
+.date {
+    font-size: 12px;
+    color: #888;
+    margin-top: 3px;
+}
+
+.progress-item::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: calc(100% - 40px);
+    height: 4px;
+    background-color: #ddd;
+    transform: translateX(20px) translateY(-50%);
+    z-index: -1;
+}
+
+.progress-item:last-child::after {
+    display: none;
+}
+
+.progress-item.active .circle {
+    background-color: #4CAF50;
+}
+
+.progress-item.active::after {
+    background-color: #4CAF50;
+}

@@ -1,0 +1,84 @@
+.container {
+  font-family: 'Arial, sans-serif';
+  max-width: 800px;
+  margin: 40px auto; /* Added margin at the top to move everything lower */
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 20px;
+  border: 2px solid #ccc; /* One border around the entire container */
+  border-radius: 10px; /* Optional: Rounded corners */
+}
+
+.left-section {
+  flex: 1;
+  padding: 20px;
+}
+
+.left-section h1 {
+  font-size: 24px;
+}
+
+.left-section p {
+  font-size: 16px;
+}
+
+.color-options-container {
+  margin-top: 20px;
+}
+
+.color-options {
+  display: flex;
+  gap: 20px; /* Added gap between the images */
+  flex-wrap: wrap; /* Ensures images wrap to next line if necessary */
+}
+
+.color-options img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  cursor: pointer;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+
+.color-options img.selected {
+  border: 2px solid black; /* Highlight the selected image */
+}
+
+.button-container {
+  margin: 20px 0;
+}
+
+.button-container button {
+  padding: 10px 20px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.button-container .add-to-cart {
+  background-color: #000;
+  color: #fff;
+  border: none;
+}
+
+.button-container .check-room-layout {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #000;
+}
+
+.right-section {
+  flex: 1;
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px;
+}
+
+.right-section img {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  object-fit: cover;
+}

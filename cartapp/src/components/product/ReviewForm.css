@@ -1,0 +1,100 @@
+/* General container styling */
+.review-form-container {
+    max-width: 1200px;
+    padding: 20px;
+    background-color: #f9f9f9;
+  }
+  
+  /* Form styling */
+  .review-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .review-form label {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .review-form input,
+  .review-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  .review-form button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .review-form button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Reviews container */
+  .reviews-container {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  /* Review card styling */
+  .review-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    transition: transform 0.2s ease;
+  }
+  
+  .review-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .review-header {
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 10px;
+  }
+  
+  .review-name {
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .review-body {
+    margin-top: 10px;
+  }
+  
+  .review-text {
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #666;
+    resize: none;
+  }
+  
+  /* No reviews styling */
+  .no-reviews {
+    text-align: center;
+    font-style: italic;
+    color: #777;
+  }

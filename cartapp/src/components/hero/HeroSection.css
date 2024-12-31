@@ -1,0 +1,74 @@
+html {
+    scroll-behavior: smooth;
+  }
+  
+.hero-section {
+    position: relative;
+    text-align: left;
+    background-image: url('../../images/bg.png');
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    height: 95vh; 
+    color: black; 
+    display: flex;
+    align-items: center;
+    padding: 20px;
+  }
+  
+
+
+.hero-section h1 {
+    font-size: 48px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+    color: black;
+}
+
+.hero-section .explore-btn:hover {
+    background-color: #333;
+    transform: scale(1.1);
+}
+
+a {
+    text-decoration: none; 
+}
+
+/* Ensure this is for the specific explore button */
+button.explore-btn {
+    animation: bounce 1.5s infinite;
+    background-color: #333;
+    color: white !important;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 15px 30px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button.explore-btn:hover {
+    background-color: white !important;
+    transform: translateY(-5px);
+    color: black !important; 
+}
+
+/* Prevent link colors from affecting the button */
+button.explore-btn a {
+    color: inherit !important; /* Ensures text color is inherited from the button */
+}
+
+/* Keyframe animation for bouncing effect */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-15px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}

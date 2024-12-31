@@ -1,0 +1,109 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+.reviews-page {
+  padding: 20px;
+  text-align: center;
+}
+
+.reviews-page .title {
+  font-size: 40px;
+  
+}
+
+.review-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.review-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 350px;
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.profile-image {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid #ddd; /* Slightly thicker border for better visibility */
+  display: flex;
+  align-items: center; /* Vertically center the image */
+  justify-content: center; /* Horizontally center the image */
+  background-color: #f9f9f9; /* Optional: Background color to match theme */
+}
+
+.profile-image img {
+  width: 100%; /* Ensure the image covers the container */
+  height: 100%; /* Stretch the image proportionally */
+  object-fit: cover; /* Crop the image to fit the container without distortion */
+}
+
+.profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-info h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.card-info .designation {
+  font-size: 14px;
+  color: #888;
+}
+
+.card-body {
+  margin-top: 15px;
+}
+
+.review-text {
+  font-size: 16px;
+  font-style: italic;
+  color: #333;
+  margin: 10px 0;
+}
+
+.rating {
+  margin-top: 10px;
+}
+
+.rating .star {
+  font-size: 20px;
+  color: #ddd;
+}
+
+.rating .star.filled {
+  color: #ff9500;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+}
+
+.review-card:hover{
+  transform: scale(1.05); /* Scale up the item */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}

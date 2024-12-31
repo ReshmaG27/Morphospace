@@ -1,0 +1,66 @@
+.past-orders-container {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+  }
+  
+  .past-orders-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .order-item {
+    display: flex;
+    align-items: center; /* Center details vertically relative to the image */
+    margin-bottom: 30px;
+    padding: 20px; /* Add padding inside the box */
+    border: 1px solid #ddd; /* Box border */
+    border-radius: 8px; /* Rounded corners */
+    background-color: #ffffff; /* Light background color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    width: 80%; /* Restrict content width */
+}
+
+  
+  .order-image {
+    width: 250px; /* Larger image size */
+    height: auto;
+    margin-right: 40px; /* Add spacing between the image and details */
+  }
+  
+  .order-details {
+    flex: 1;
+    text-align: left;
+  }
+  
+  .order-id {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .order-name {
+    font-size: 22px; /* Slightly larger font for the product name */
+    margin: 10px 0;
+  }
+  
+  .order-price {
+    margin: 0;
+    font-size: 18px; /* Larger font for the price */
+  }
+  
+  .order-tax {
+    margin: 0;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .order-delivery {
+    margin: 10px 0;
+    font-size: 14px;
+  }
+  

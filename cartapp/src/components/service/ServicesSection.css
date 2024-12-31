@@ -1,0 +1,96 @@
+/* Services Section */
+.services-section {
+    display: flex;
+    padding: 40px 20px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.services-section .text-content {
+    flex: 1;
+    padding-right: 20px;
+    max-width: 800px;
+    font-size: 20px;
+}
+
+.services-section h2 {
+    flex: 1;
+    padding-right: 20px;
+    max-width: 800px;
+    font-size: 40px;
+    text-align: center;
+}
+
+.services-section .image-slider {
+    flex: 1;
+    position: relative;
+    max-width: 800px;
+    overflow: hidden;
+}
+
+.services-section .slider-images {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.services-section .slider-images img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    display: none; 
+}
+
+.services-section .slider-images img.active {
+    display: block; 
+}
+
+.services-section .prev-btn,
+.services-section .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.services-section .prev-btn {
+    left: 10px;
+}
+
+.services-section .next-btn {
+    right: 10px;
+}
+
+.services-section .prev-btn:hover,
+.services-section .next-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Add border to subtitle and context */
+.services-section .slider-title {
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    color: red;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    width: 100%;
+    padding: 10px; /* Optional, for spacing around text */
+    border-radius: 5px; /* Optional, for rounded corners */
+}
+
+
+
+.services-section .context {
+    margin-top: 50px;
+    padding: 20px;  /* Adds padding inside the box */
+    background-color: #f4f4f4;  /* Light background color */
+
+    box-shadow: 8px 8px 16px rgba(0, 0.1, 0, 0.5);  /* Optional: adds a subtle shadow */
+}
