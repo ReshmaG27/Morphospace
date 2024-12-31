@@ -80,7 +80,8 @@ function Header() {
 
         <nav>
           <ul className="nav-list">
-            <li className="nav-item"><a href="/home">Home</a></li>
+            <li className="nav-item"><a href="/">Home</a></li>
+            <li className="nav-item" onClick={() => navigate('/login')}><a>Login</a></li>
             <li className="nav-item" onClick={() => navigate('/review')}><a>Reviews</a></li>
             <li className="nav-item" onClick={() => navigate('/contact')}><a>Contact Us</a></li>
           </ul>

@@ -1,13 +1,13 @@
 import React from "react";
 import './about.css';
-
+import logo from '../../../images/logo.png'
 const AboutUs = () => {
   return (
     <div>
       {/* Header Section */}
       <div className="heading">
         <div className="animated-logo">
-          <img src="logo.png" alt="Logo" className="logo" />
+          <img src={logo} alt="Logo" className="logo" />
         </div>
         <h1 className="title fade-in">Morphospace</h1>
         <p className="tagline slide-in">

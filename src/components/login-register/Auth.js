@@ -11,7 +11,6 @@ function Auth({ defaultToLogin = true }) {
 
   return (
     <div className="auth-wrapper" aria-live="polite">
-      <h1 className="title"> Welcome to Morphospace</h1>
       {isLogin ? (
         <Login onSwitchToRegister={switchToRegister} />
       ) : (

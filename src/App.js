@@ -40,8 +40,8 @@ function App() {
     <Router>
       <ScrollToTop />
       <Routes>
-        <Route path="/home" element={<Layout><Home /></Layout>} />
-        <Route path="/" element={<Auth />}/>
+        <Route path="/" element={<Layout><Home /></Layout>} />
+        <Route path="/login" element={<Layout><Auth /></Layout>}/>
         {/* <Route path="/cart" element={<Layout><ShoppingCart/></Layout>} /> */}
         <Route path="/contact" element={<Layout><ContactUsPage /></Layout>} />
         <Route path="/edit-profile" element={<Layout><EditProfile /></Layout>} />
