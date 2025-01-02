@@ -60,7 +60,9 @@ h1 {
 .product-info {
   flex: 1;
   text-align: left;
+  margin-left: 40px;
 }
+
 
 .product-info h2 {
   font-size: 1.5em;
@@ -71,6 +73,7 @@ h1 {
 .product-info p {
   font-size: 1em;
   color: #555;
+  margin-top: 10px;
 }
 
 /* Track Button with Monochrome Shades */
@@ -82,6 +85,7 @@ h1 {
   border-radius: 5px;
   font-size: 1em;
   cursor: pointer;
+  margin-right: 20px;
 }
 
 .track-button:hover {

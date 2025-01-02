@@ -35,28 +35,21 @@ function Header() {
 
   const handleSearch = (e) => {
     e.preventDefault();
-    if (searchTerm.toLowerCase() === 'sofa') {
-      navigate('/sofa');
-    }
-    else if (searchTerm.toLowerCase() === 'livingroom'){
-      navigate('/livingroom');
-    } 
-    else if (searchTerm.toLowerCase() === 'diningroom'){
-      navigate('/diningroom');
-    } 
-    else if (searchTerm.toLowerCase() === 'bedroom'){
-      navigate('/bedroom');
-    } 
-    else if (searchTerm.toLowerCase() === 'outdoor'){
-      navigate('/outdoor');
-    } 
-    else if (searchTerm.toLowerCase() === 'office'){
-      navigate('/office');
-    } 
-    else if (searchTerm.toLowerCase() === 'kitchen'){
-      navigate('/kitchen');
-    } 
-    else {
+    const searchMapping = {
+      sofa: '/sofa',
+      chair: '/chair',
+      livingroom: '/livingroom',
+      diningroom: '/diningroom',
+      bedroom: '/bedroom',
+      outdoor: '/outdoor',
+      office: '/office',
+      kitchen: '/kitchen',
+    };
+
+    const lowerCaseSearchTerm = searchTerm.toLowerCase();
+    if (searchMapping[lowerCaseSearchTerm]) {
+      navigate(searchMapping[lowerCaseSearchTerm]);
+    } else {
       alert('No results found.');
     }
   };
@@ -64,7 +57,10 @@ function Header() {
   return (
     <header>
       <div className="top-header">
-        <div className="logo">MORPHOSPACE</div>
+        <div className="logo" onClick={() => navigate('/')}>
+          <img src={require('../../images/logo1.jpeg')} alt="Logo" className="logo-image" />
+          <span>MORPHOSPACE</span>
+        </div>
         <form className="search-bar" onSubmit={handleSearch}>
           <input
             type="text"
@@ -76,7 +72,6 @@ function Header() {
             <span className="search-icon">&#128269;</span> {/* Unicode for magnifying glass */}
           </button>
         </form>
-
 
         <nav>
           <ul className="nav-list">
@@ -98,7 +93,7 @@ function Header() {
 
       <div id="dashboard" className={`dashboard ${isDashboardOpen ? 'visible' : 'hidden'}`}>
         <div className="dashboard-header">
-          <h2 className='title'>Dashboard</h2>
+          <h2 className="title">Dashboard</h2>
           <button onClick={toggleDashboard}>✖</button>
         </div>
         <div className="dashboard-content">
@@ -127,7 +122,7 @@ function Header() {
               navigate('/pastorders'); 
               setIsDashboardOpen(false); 
             }}>
-            <img src={d3} alt="Pastorders Icon" />
+            <img src={d3} alt="Past Orders Icon" />
             <div>
               <h3>PAST ORDERS</h3>
             </div>
@@ -137,7 +132,7 @@ function Header() {
               navigate('/about'); 
               setIsDashboardOpen(false); 
             }}>
-            <img src={d4} alt="Settings Icon" />
+            <img src={d4} alt="About Icon" />
             <div>
               <h3>ABOUT</h3>
             </div>
@@ -147,7 +142,7 @@ function Header() {
               navigate('/add_review'); 
               setIsDashboardOpen(false); 
             }}>
-            <img src={d6} alt="Settings Icon" />
+            <img src={d6} alt="Add Review Icon" />
             <div>
               <h3>ADD REVIEW</h3>
             </div>
@@ -159,7 +154,7 @@ function Header() {
             }}>
             <img src={d5} alt="Logout Icon" />
             <div>
-              <h3>Logout</h3>
+              <h3>LOGOUT</h3>
             </div>
           </div>
         </div>

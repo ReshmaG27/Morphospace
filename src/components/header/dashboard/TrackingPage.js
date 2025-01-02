@@ -6,16 +6,14 @@ import image2 from '../../../images/sofa2.jpg';
 import image3 from '../../../images/sofa3.jpg';
 import image4 from '../../../images/sofa4.jpg';
 
-
-
 function TrackingPage() {
   const navigate = useNavigate();
 
   const products = [
-    { id: 1, name: "Product 1", price: "$50", image: image1 },
-    { id: 2, name: "Product 2", price: "$75", image: image2 },
-    { id: 3, name: "Product 3", price: "$75", image: image3 },
-    { id: 4, name: "Product 4", price: "$75", image: image4 },
+    { id: 1, name: "3 - Seat Sofa", price: "Rs.20,990", image: image1, trackingId: "TRACK123SOFA" },
+    { id: 2, name: "Corner Sofa-bed with Storage", price: "Rs.54,990", image: image2, trackingId: "TRACK124SOFA" },
+    { id: 3, name: "Sofa-bed", price: "Rs.19,990", image: image3, trackingId: "TRACK125SOFA" },
+    { id: 4, name: "3- Seat Sofa", price: "Rs.27,990", image: image4, trackingId: "TRACK126SOFA" },
   ];
 
   return (
@@ -35,7 +33,7 @@ function TrackingPage() {
             </div>
             <button 
               className="track-button bouance"
-              onClick={() => navigate('/order')}
+              onClick={() => navigate('/order', { state: product })}
             >
               Track
             </button>

@@ -46,14 +46,13 @@ h1 {
 }
 
 .product-image {
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     object-fit: cover;
     border-radius: 8px;
     margin: 15px auto; /* Center horizontally */
     display: block; /* Ensures margin:auto works */
 }
-
 
 .product-name {
     font-size: 20px;
@@ -117,21 +116,41 @@ h1 {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: calc(100% - 40px);
-    height: 4px;
-    background-color: #ddd;
-    transform: translateX(20px) translateY(-50%);
+    width: calc(100% - 50px); /* Adjust width for the gap between items */
+    height: 4px; /* Thickness of the line */
+    background-color: #ddd; /* Default line color */
+    transform: translateX(25px) translateY(-50%);
     z-index: -1;
+    transition: background-color 0.3s ease;
 }
 
-.progress-item:last-child::after {
-    display: none;
-}
-
+/* Active Step Styling */
 .progress-item.active .circle {
     background-color: #4CAF50;
 }
 
 .progress-item.active::after {
-    background-color: #4CAF50;
+    background-color: #4CAF50; /* Line color for active progress */
+}
+
+.progress-item:last-child::after {
+    display: none; /* Remove line after the last step */
+}
+
+/* Mobile View Adjustment */
+@media (max-width: 768px) {
+    .progress-bar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .progress-item {
+        width: auto;
+    }
+
+    .progress-item::after {
+        width: 4px; /* Vertical line thickness */
+        height: calc(100% - 50px); /* Vertical line length between steps */
+        transform: translateX(-50%) translateY(25px);
+    }
 }
